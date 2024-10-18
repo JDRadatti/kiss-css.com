@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Card</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Card</h1>
+            <div class="title3">
+                Cards are semantically defined using the <code class="language-html">&lt;article&gt;</code> tag. By
+                default, their padding and border-radius vary based on the largest font size inside the card.
+            </div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+            <article>Card</article>
+            <footer role="copy">
+                <code class="language-html">&lt;article&gt;Card&lt;/article&gt;</code>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <section>
+            <h2 id="header-footer">Header and Footer</h2>
+            <article>
+                <header>Header</header>Card<footer>Footer</footer>
+            </article>
+            <footer role="copy">
+                <code class="language-html">&lt;article&gt;Card&lt;/article&gt;</code>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- Utility Classes -->
+        <section>
+            <h2 id="utility-classes">Utility Classes</h2>
+            <h3>.border</h3>
+            <article class="border">
+                <header>Header</header>Card<footer>Footer</footer>
+            </article>
+
+            <h3>.state-layer</h3>
+            <article class="state-layer">
+                <header>Header</header>Card<footer>Footer</footer>
+            </article>
+            <a href="/docs/base/state-layer">Learn more about state-layers</a>
+
+            <h3 class="m-top__sm">.bg-primary</h3>
+            <p>Use any background utility to change the color scheme of a card.</p>
+            <article class="state-layer bg-primary">
+                <header>Header</header>Card<footer>Footer</footer>
+            </article>
+        </section>
+
+        <!-- Dynamic Sizing -->
+        <section>
+            <h2 id="dynamic">Dynamic Sizing</h2>
+            <p>Card padding and border radii automatically scale to match the size of the largest font size within the
+                card.</p>
+
+            <h3 id="examples">Examples</h3>
+
+            <details open>
+                <summary> Default Styles</summary>
+                <div class="flex-col__sm m-top__md">
+                    <article>
+                        <h1>Header</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+                    <article>
+                        <div class="display2">Header</div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+                    <article>
+                        <h3>Header</h3>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+                    <article>
+                        <h4>Header</h4>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+
+                    <article>
+                        <h5>Header</h5>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+                    <article>
+                        <h6>Header</h6>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                    </article>
+
+                </div>
+            </details>
+
+            <details open>
+                <summary>With Header and Footer</summary>
+                <div class="flex-col__sm m-top__md">
+                    <article>
+                        <header>
+                            <h1>Header</h1>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+
+                    <article>
+                        <header>
+                            <div class="display2">Header</div>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h3>Header</h3>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>Header</h4>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+
+
+                    <article>
+                        <header>
+                            <h5>Header</h5>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h6>Header</h6>
+                        </header>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a mi quis lorem fringilla
+                        posuere
+                        non
+                        et lectus. Vestibulum vel tristique quam.
+                        <footer> Footer</footer>
+                    </article>
+                </div>
+            </details>
+        </section>
+
+
+        <section>
+            <h2 id="static">Static Sizing</h2>
+            <p>It is possible to turn off the dynamic padding and border radius of cards.</p>
+            <p>Simply set <code clsss="language-html">$dynamic-card-padding: false;</code>
+                in <a
+                    href="https://github.com/JDRadatti/kiss-css/blob/main/sass/abstracts/_config.scss">/sass/abstracts/_config.scss</a>.
+        </section>
+
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+
+    <!-- Footer -->
+    <footer>
+        <kiss-footer></kiss-footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
