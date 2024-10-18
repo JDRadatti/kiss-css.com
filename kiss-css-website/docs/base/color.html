@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Color</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Color</h1>
+            <div class="title3">Color schemes are incredibly easy to modify and interchange, with builtin support for
+                both
+                light and dark modes.</div>
+        </hgroup>
+
+        <!-- Section -->
+        <section>
+            <h2 id="Utility Classes">Utility Classes</h2>
+            <p>Swap color styles with ease; all you have to do is add <code
+                    class="language-html">class="theme-name".</code>
+            </p>
+            <select id="theme-select">
+                <option selected disabled value="">Select Color Scheme</option>
+                <option>Default</option>
+                <option>Yellow</option>
+                <option>Red</option>
+                <option>Pink</option>false
+            </select>
+            <div id="colors"></div>
+            <article>
+                <header class="bg-infocontainer" data-icon="info">Note</header>
+                The color cards above contain the class <code class="language-html">.state-layer</code> for hover and
+                active effects.
+                <footer>
+                    <a href="/css/base/state-layer">Learn more</a>.
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2 id="customization">Customization</h2>
+            <p>
+                KISS CSS uses <a href="https://material-foundation.github.io/material-theme-builder/">Material
+                    Design Theme Builder</a>. Visit the Material design website to create and download your custom color
+                scheme. Then, follow the instructions below to
+                add the new colors to your website.
+            </p>
+            <h3>Classes</h3>
+            <p>Overload any color with the classes downloaded from Material Design. Note the prefix
+                <mark>--md-sys-color</mark> can be customized with <a href="https://sass-lang.com/">Sass</a>.</p>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;style&gt;
+    .theme-name {
+        // Default colors
+        --md-sys-color-primary: ...;
+    }
+
+    [data-theme="light"] {
+        .theme-name {
+            // Light colors
+            --md-sys-color-primary: ...;
+        }
+    }
+
+    [data-theme="dark"] {
+        .theme-name {
+            // Dark colors
+            --md-sys-color-primary: ...;
+        }
+    }
+&lt;/style&gt;
+&lt;/div class="theme-name"&gt;&lt;/div&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+
+            <h3>Sass</h3>
+            <ul>
+                <li>Clone the Repository.</li>
+                <li>Modify <a
+                        href="https://github.com/JDRadatti/kiss-css/blob/main/sass/theme/_colors.scss">sass/theme/_colors.scss</a>
+                    with the downloaded colors for both light and dark
+                    mode.
+                </li>
+                <li>Recompile CSS file. Refer to the <a href="https://sass-lang.com/guide/#preprocessing">Sass
+                        documentation</a> for more information.</li>
+            </ul>
+
+            <!-- Warning -->
+            <article>
+                <header class="bg-warningcontainer" data-icon="warning">Warning</header>
+                KISS CSS uses three extended colors with <a
+                    href="https://material-foundation.github.io/material-theme-builder/">Material Design Theme
+                    Builder</a>: green, yellow/orange, and blue. green is used for success, yellow or orange is used for
+                warnings(like this card), and blue is used for neutral information.
+                <br />
+                <hr>
+                To achieve this:
+                <ul>
+                    <li>
+                        Add the three extended colors when creating your color scheme.
+                    </li>
+                    <li>
+                        Rename each extended color to their respective symantic meaning (i.e. rename the green extended
+                        color to "Success").
+                    </li>
+                    <li>
+                        When importing into your stylesheet, remove the "--md-extended-color" prefix and replace with
+                        the "--md-sys-color" prefix, or #{$color-prefix} if using <a
+                            href="https://sass-lang.com/">Sass</a>.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2 id="schemes">Light and Dark Color Schemes</h2>
+
+            <p>KISS CSS automatically user's system presets for color scheme. To force a specific color scheme, simply
+                add <code class="language-html">data-theme="light"</code> or <code
+                    class="language-html">data-theme="light"</code> in the <code
+                    class="language-html">&lt;html&gt;</code> tag.
+            </p>
+        </section>
+
+    </main>
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+    <script type="module" src="../../js/colors.js"></script>
+</body>
+
+</html>
