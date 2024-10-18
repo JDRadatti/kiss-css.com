@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Button</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Button</h1>
+            <div class="title3">Buttons are defined symantically and include the ability to add icons using the <code
+                    class="language-html">data-icon</code> attribute.</div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+            <article>
+                <button>Label</button>
+                <footer role="copy">
+                    <code class="language-html">&lt;button&gt;Label&lt;/button&gt;</code>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Classes -->
+        <section>
+
+
+            <h2 id="classes">Utility Classes</h2>
+            <h3>Styles</h3>
+            <p>Buttons come with multiple utility classes for different commonly used styles and use-cases.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Utility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="text bg-onprimary">Label</button>
+                        </td>
+                        <td>.text</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="text border bg-onprimary">Label</button>
+                        </td>
+                        <td>.text.border</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button class="large">Label</button>
+                        </td>
+                        <td>.large</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Color</h3>
+            <p>Change the color using color utility classes. Learn more about colors <a
+                    href="/docs/base/color">here</a>.
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Utility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="bg-tertiary">Label</button>
+                        </td>
+                        <td>.bg-tertiary</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="bg-onerror">Label</button>
+                        </td>
+                        <td>.bg-onerror</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button class="bg-inversesurface">Label</button>
+                        </td>
+                        <td>.bg-inversesurface</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Button Icons -->
+        <section>
+            <h2 id="icons">Icons</h2>
+            <p>Easily add icons to buttons with <code class="language-html">data-icon</code>.
+                Learn more about icons <a href="/docs/base/icon">here</a>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                        </th>
+                        <th scope="col">Syntax</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button data-icon="home">Label</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-icon="home"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button data-icon="home" data-placement="right">Label</button>
+                        </td>
+                        <td>
+
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-icon="home"
+                                    data-placement="right"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button data-icon="home" data-placement="top">Label</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-icon="home"
+                                    data-placement="top"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button data-icon="home" data-placement="bottom">Label</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html">
+                                    &lt;button data-icon="home" data-placement="top"&gt;
+                                    Label
+                                    &lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button>
+                                <div class="data-icon">Home</div>
+                            </button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html">
+                                    &lt;button&gt;
+                                    &lt;div class="data-icon"&gt;Home&lt;/div&gt;
+                                    &lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 id="multiple-icons">Multiple Icons</h2>
+            <p>
+                Due to the way <code class="language-html">data-icon</code> is implemented, you must use nested
+                <code class="language-html">&lt;div class="data-icon"&gt;</code>
+                elements to achieve multiple icons.
+            </p>
+            <article>
+                <button>
+                    <div class="data-icon">Home</div>
+                    Home
+                    <div class="data-icon">Home</div>
+                </button>
+
+                <footer role="copy">
+                    <pre>
+                        <code class="language-html">
+&lt;button&gt;
+    &lt;div class="data-icon"&gt;Home&lt;/div&gt;
+    Home
+    &lt;div class="data-icon"&gt;Home&lt;/div&gt;
+&lt;/button&gt;
+                        </code>
+                    </pre>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+            </article>
+
+
+            <p>
+                Add <code class="language-html">.vertical</code> to achieve a vertical stacking with multiple icons.
+            </p>
+            <article>
+                <button class="vertical">
+                    <div class="data-icon">Home</div>
+                    Home
+                    <div class="data-icon">Home</div>
+                </button>
+
+                <footer role="copy">
+                    <pre>
+                        <code class="language-html">
+&lt;button class="vertical"&gt;
+    &lt;div class="data-icon"&gt;Home&lt;/div&gt;
+    Home
+    &lt;div class="data-icon"&gt;Home&lt;/div&gt;
+&lt;/button&gt;
+                        </code>
+                    </pre>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+            </article>
+        </section>
+
+
+
+    </main>
+
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
