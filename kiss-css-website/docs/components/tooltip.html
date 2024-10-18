@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Tooltip</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Tooltip</h1>
+            <div class="title3">Add a tooltip to any element with the <code class="language-html">data-tooltip</code>
+                attribute.
+            </div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+
+            <article>
+                <div style="display:flex; gap: var(--sm); align-items: center;">
+                    <button data-tooltip="Button">Button</button>
+                </div>
+                <footer role="copy">
+                    <code class="language-html">
+                        &lt;button data-tooltip="Button"&gt;Button&lt;/button&gt;
+                    </code>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+
+            </article>
+            <article>
+                <div style="display:flex; gap: var(--sm); align-items: center;">
+                    <a data-tooltip="Link">Link</a>
+                </div>
+                <footer role="copy">
+                    <code class="language-html">&lt;a data-tooltip="Link"&gt;Link&lt;/a&gt;</code>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+
+            </article>
+        </section>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="placement">Placement</h2>
+
+            <p>Change the placement with the <code class="language-html">data-placement</code> attribute.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                        </th>
+                        <th scope="col">Syntax</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Right -->
+                    <tr>
+                        <td>
+                            <button data-tooltip="Right" data-placement="right">Right</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-tooltip="Right"
+                                    data-placement="right"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="right">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Left -->
+                    <tr>
+                        <td>
+                            <button data-tooltip="Left" data-placement="left">Left</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-tooltip="Left"
+                                    data-placement="left"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="left">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Top -->
+                    <tr>
+                        <td>
+                            <button data-tooltip="Top" data-placement="top">Top</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-tooltip="Top"
+                                    data-placement="top"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="top">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Bottom -->
+                    <tr>
+                        <td>
+                            <button data-tooltip="Bottom" data-placement="bottom">Bottom</button>
+                        </td>
+                        <td>
+                            <div role="copy">
+                                <code class="language-html"> &lt;button data-tooltip="Bottom"
+                                    data-placement="bottom"&gt;Label&lt;/button&gt;
+                                </code>
+                                <button class="text" data-tooltip="Copy" data-placement="bottom">
+                                    <div class="data-icon">content_copy</div>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <kiss-footer></kiss-footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
