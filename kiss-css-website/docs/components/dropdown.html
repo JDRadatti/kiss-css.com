@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Dropdown</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Dropdown</h1>
+            <div class="title3">Use <code class="language-html">&lt;details&gt;</code> with
+                <code class="language-html">role="dropdown"</code> attribute to
+                create a dropdown.
+            </div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+            <article>
+                <details role="dropdown">
+                    <summary>Graduation Requirements</summary>
+                    <ul>
+                        <li>Requires 40 credits</li>
+                        <li>Including a passing grade in health</li>
+                        <li>Geography</li>
+                        <li>History</li>
+                        <li>Economics</li>
+                        <li>Wood Shop</li>
+                </details>
+                <footer role="copy">
+                    <pre>
+                        <code class="language-html">
+&lt;details role="dropdown"&gt;
+    &lt;summary&gt;Graduation Requirements&lt;/summary&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Requires 40 credits&lt;/li&gt;
+        &lt;li&gt;Including a passing grade in health&lt;/li&gt;
+        &lt;li&gt;Geography&lt;/li&gt;
+        &lt;li&gt;History&lt;/li&gt;
+        &lt;li&gt;Economics&lt;/li&gt;
+        &lt;li&gt;Wood Shop&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/details&gt;
+                        </code>
+                    </pre>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+
+            </article>
+        </section>
+
+
+        <!-- Classes -->
+        <section>
+            <h2 id="classes">Utility Classes</h2>
+            <p> Remove the border with the
+                <code class="language-html">text</code> class.
+            </p>
+            <article>
+                <details class="text" role="dropdown">
+                    <summary>Graduation Requirements</summary>
+                    <ul>
+                        <li>Requires 40 credits</li>
+                        <li>Including a passing grade in health</li>
+                        <li>Geography</li>
+                        <li>History</li>
+                        <li>Economics</li>
+                        <li>Wood Shop</li>
+                </details>
+
+                <footer role="copy">
+                    <pre>
+                        <code class="language-html">
+&lt;details class="text" role="dropdown"&gt;
+    &lt;summary&gt;Graduation Requirements&lt;/summary&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Requires 40 credits&lt;/li&gt;
+        &lt;li&gt;Including a passing grade in health&lt;/li&gt;
+        &lt;li&gt;Geography&lt;/li&gt;
+        &lt;li&gt;History&lt;/li&gt;
+        &lt;li&gt;Economics&lt;/li&gt;
+        &lt;li&gt;Wood Shop&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/details&gt;
+                        </code>
+                    </pre>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+
+                </footer>
+
+            </article>
+        </section>
+
+        <section>
+            <h2 id="card">Card</h2>
+            <p> Use with a <code class="language-html">Card</code>.
+            </p>
+            <article>
+                <details role="dropdown">
+                    <summary>Graduation Requirements</summary>
+                    <article>
+                        <header>Header</header>
+                        Body
+                        <footer class="flex-row__space-between">Footer<button>Button</button></footer>
+                    </article>
+                </details>
+
+                <footer role="copy">
+                    <pre>
+                        <code class="language-html">
+&lt;details role="dropdown"&gt;
+    &lt;summary&gt;Graduation Requirements&lt;/summary&gt;
+    &lt;article&gt;
+        &lt;header&gt;Header&lt;/header&gt;
+        Body
+        &lt;footer class="flex-row__space-between"&gt;
+            Footer
+            &lt;button&gt;Button&lt;/button&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/details&gt;
+                        </code>
+                    </pre>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+
+                </footer>
+
+            </article>
+        </section>
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+
+    <!-- Footer -->
+    <footer>
+        <kiss-footer></kiss-footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
