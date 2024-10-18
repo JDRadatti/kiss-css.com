@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Dropdown</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Navigation</h1>
+            <div class="title3">Navigation uses the <code class="language-html">&lt;nav&gt;</code> tag and
+                adapts to vertical and horizontal positionings.
+            </div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+            <article>
+                <header class="bg-infocontainer" data-icon="info">Note</header>
+                <p>By design, the navigation bar does not have padding or margin. The
+                    spacing is handled by <a href="/docs/base/layout">layout</a>.</p>
+            </article>
+            <article>
+                <nav>
+                    <ul>
+                        <li class="title3__bold"><a>Brand</a></li>
+                    </ul>
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Next</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- Aside -->
+        <section>
+            <h2 id="aside">Aside</h2>
+            <p>Navigation changes to a vertical layout when in a <code class="language-html">&lt;aside&gt;</code>
+                element or if <code class="language-html">role="menu"</code>.</p>
+            <article>
+                <aside>
+                    <nav>
+                        <ul>
+                            <li class="title3__bold"><a>Brand</a></li>
+                        </ul>
+                        <ul>
+                            <li><a>Home</a></li>
+                            <li><a>Next</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav role="menu"&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <!-- Details -->
+        <section>
+            <h2 id="details">Details</h2>
+            <p>Use dropdown menus in vertical menus with <code class="language-html">&lt;details&gt;</code>.</p>
+            <article>
+                <aside>
+                    <nav>
+                        <ul>
+                            <li class="title3__bold"><a>Brand</a></li>
+                        </ul>
+                        <details open>
+                            <summary>Summary 1</summary>
+                            <ul>
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Summary 1</summary>
+                                        <ul>
+                                            <li><a>Link 1</a></li>
+                                            <li><a>Link 2</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Summary 2</summary>
+                            <ul>
+                                <li><a>Link 3</a></li>
+                                <li><a>Link 4</a></li>
+                            </ul>
+                        </details>
+                    </nav>
+                </aside>
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;aside&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;details open&gt;
+            &lt;summary&gt;Summary 1&lt;/summary&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;details&gt;
+                        &lt;summary&gt;Summary 1&lt;/summary&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/details&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/details&gt;
+        &lt;details&gt;
+            &lt;summary&gt;Summary 2&lt;/summary&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/details&gt;
+    &lt;/nav&gt;
+&lt;/aside&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <section>
+            <h3>Disabled</h3>
+            <p>Disable the dropdown effect by adding <code class="language-html">disabled</code> to the <code
+                    class="language-html">&lt;summary&gt;</code> tag.</p>
+            <p>Disabling the dropdown hides the arrow. </p>
+
+            <article>
+                <aside>
+                    <nav>
+                        <details open>
+                            <summary disabled>Summary</summary>
+                            <ul>
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                            </ul>
+                        </details>
+                    </nav>
+                </aside>
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;aside&gt;
+    &lt;nav&gt;
+        &lt;details open&gt;
+            &lt;summary disabled&gt;Summary&lt;/summary&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/details&gt;
+    &lt;/nav&gt;
+&lt;/aside&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+
+            <h3>Hide Arrows</h3>
+            <p>Use the <code class="language-html">.hide-arrows</code> class on the <code
+                    class="language-html">&lt;summary&gt;</code> tag.</p>
+        </section>
+
+        <section>
+            <h2 id="dropdown">Dropdown</h2>
+            <p>Use dropdowns in horizontal menus with <code class="language-html">&lt;details
+                    role="dropdown"&gt;</code>.</p>
+            <article>
+                <nav>
+                    <ul>
+                        <li class="title3__bold"><a>Brand</a></li>
+                    </ul>
+                    <ul>
+                        <details role="dropdown">
+                            <summary>Summary 1</summary>
+                            <ul>
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                            </ul>
+                        </details>
+                        <details role="dropdown">
+                            <summary>Summary 2</summary>
+                            <ul>
+                                <li><a>Link 3</a></li>
+                                <li><a>Link 4</a></li>
+                            </ul>
+                        </details>
+                    </ul>
+                </nav>
+
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;details role="dropdown"&gt;
+            &lt;summary&gt;Summary 1&lt;/summary&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/details&gt;
+        &lt;details role="dropdown"&gt;
+            &lt;summary&gt;Summary 2&lt;/summary&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/details&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <section>
+            <h2 id="button">Button</h2>
+            <article>
+                <nav>
+                    <ul>
+                        <li class="title3__bold"><a>Brand</a></li>
+                    </ul>
+                    <ul>
+                        <li><button>Button</button></li>
+                    </ul>
+                </nav>
+
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <section>
+            <h2 id="icon">Icon</h2>
+            <article>
+                <nav>
+                    <ul>
+                        <li class="title3__bold"><a>Brand</a></li>
+                    </ul>
+                    <ul>
+                        <li><button><div class="data-icon">menu</div></button></li>
+                    </ul>
+                </nav>
+
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;button&gt;
+                &lt;div class="data-icon"&gt;menu&lt;/div&gt;
+            &lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+        <section>
+            <h2 id="spacing">Spacing</h2>
+            <p>Navbar uses <code class="language-html">diplay: flex</code> with <code
+                    class="language-html">flex-direction: space-between</code> to evenly space <code
+                    class="language-html">&lt;ul&gt;</code> elements.
+            </p>
+            <article>
+                <nav>
+                    <ul>
+                        <li class="title3__bold"><a>Brand</a></li>
+                    </ul>
+                    <ul>
+                        <li><a>Link</a></li>
+                    </ul>
+                    <ul>
+                        <li><button>Button</button></li>
+                    </ul>
+                </nav>
+
+            </article>
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class="title3__bold"&gt;&lt;a&gt;Brand&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+
+    <!-- Footer -->
+    <footer>
+        <kiss-footer></kiss-footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
