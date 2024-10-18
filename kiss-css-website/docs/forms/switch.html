@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Switch</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <h1>Switch</h1>
+
+        <!-- Syntax -->
+        <section>
+            <fieldset>
+                <label class="title2">
+                    <input name="terms" type="checkbox" role="switch" />
+                    I agree to the Terms
+                </label>
+
+                <label>
+                    <input name="terms" type="checkbox" role="switch" />
+                    I agree to the Terms
+                </label>
+            </fieldset>
+
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;fieldset&gt;
+    &lt;label&gt;
+        &lt;input name="terms" type="checkbox" role="switch" /&gt;
+        I agree to the Terms
+    &lt;/label&gt;
+&lt;/fieldset&gt;
+                </code>
+            </pre>
+            <button class="text" data-tooltip="Copy" data-placement="left">
+                <div class="data-icon">content_copy</div>
+            </button>
+        </footer>
+     </section>
+
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
