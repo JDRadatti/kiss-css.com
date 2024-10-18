@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Link</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Link</h1>
+            <div class="title3">Links have four styles, each with an aria-current style to signify the
+                current page.</div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="syntax">Syntax</h2>
+            <article>
+                <a>Label</a>
+                <footer role="copy">
+                    <code class="language-html">&lt;a&gt;Label&lt;/a&gt;</code>
+                    <button class="text" data-tooltip="Copy" data-placement="left">
+                        <div class="data-icon">content_copy</div>
+                    </button>
+                </footer>
+            </article>
+            <!-- Styles -->
+            <section>
+                <h2 id="styles">Styles</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Utility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Primary -->
+                        <tr>
+                            <td>
+                                <ul style="list-style: none;">
+                                    <li><a class="primary">Primary</a></li>
+                                    <li><a class="primary" aria-current="page">Primary Current</a></li>
+                                    <li><a class="primary">Primary</a></li>
+                                </ul>
+                            </td>
+                            <td>.primary</td>
+                        </tr>
+                        <!-- Secondary -->
+                        <tr>
+                            <td>
+                                <ul style="list-style: none;">
+                                    <li><a class="secondary">Secondary</a></li>
+                                    <li><a class="secondary" aria-current="page">Secondary Current</a></li>
+                                    <li><a class="secondary">Secondary</a></li>
+                                </ul>
+                            </td>
+                            <td>.secondary</td>
+                        </tr>
+
+                        <!-- Tertiary -->
+                        <tr>
+                            <td>
+                                <ul style="list-style: none;">
+                                    <li><a class="tertiary">Tertiary</a></li>
+                                    <li><a class="tertiary" aria-current="page">Tertiary Current</a></li>
+                                    <li><a class="tertiary">Tertiary</a></li>
+                                </ul>
+                            </td>
+                            <td>.tertiary</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <ul style="list-style: none;">
+                                    <!-- Contrast -->
+                                    <li><a class="contrast">Contrast</a></li>
+                                    <li><a class="contrast" aria-current="page">Contrast Current</a></li>
+                                    <li><a class="contrast">Contrast</a></li>
+                                </ul>
+                            </td>
+                            <td>.contrast</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="current">Current Page</h2>
+                <article>
+                    <p>
+                        Use <code class="language-html">aria-current</code> attribute to set style to current page.
+                    </p>
+
+
+                    <footer role="copy">
+                        <code class="language-html">&lt;a
+                            aria-current="page"&gt;Label&lt;/a&gt;</code>
+                        <button class="text" data-tooltip="Copy" data-placement="left">
+                            <div class="data-icon">content_copy</div>
+                        </button>
+                    </footer>
+                </article>
+            </section>
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
