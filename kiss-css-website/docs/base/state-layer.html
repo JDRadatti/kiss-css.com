@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - State-layer</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>State-layer</h1>
+            <div class="title3"></div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="overview">Overview</h2>
+            <p>State layers power the hover and active states of KISS CSS. By default, <code
+                    class="language-html">&lt;button&gt;</code> is the only element that uses state layers.
+                However, state layers can easily be added to other elements, such as <code
+                    class="language-html">&lt;article&gt;</code>, just add <code
+                    class="language-html">.state-layer</code>.
+            </p>
+            <p>State layers are defined as a overlayed surface in <code class="language-html">::after</code>. This
+                is designed to change properties not otherwise able to be modified, like opacity or animation.
+        </section>
+        <section>
+            <h2 id="button">Button</h2>
+            <button>Label</button>
+            <footer role="copy">
+                <code class="language-html">&lt;button&gt;Label&lt;/button&gt;</code>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+        <section>
+            <h2 class="card">Card</h2>
+            <article class="state-layer">Body</article>
+            <footer role="copy">
+                <code class="language-html"> &lt;article class="state-layer"&gt;Body&lt;/article&gt; </code>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+        <section>
+            <h2 class="color">Color</h2>
+            <p>State layers inherit its parents font color as its background color.</p>
+            <button class="state-layer bg-onerror text border">Label</button>
+            <footer role="copy">
+                <code class="language-html"> &lt;button class="bg-onerror text border"&gt;Label&lt;/button&gt;
+                </code>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
