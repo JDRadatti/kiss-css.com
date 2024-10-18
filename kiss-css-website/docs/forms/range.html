@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Range</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <h1>Range</h1>
+
+        <!-- Syntax -->
+        <section>
+            <label class="title2">
+                Volume
+                <output id="brightness">50</output>
+                <input type="range" value="50" oninput="brightness.value=value" />
+            </label>
+            <label>
+                Cowbell
+                <output id="contrast">25</output>
+                <input type="range" value="25" oninput="contrast.value=value" />
+            </label>
+
+            <footer role="copy">
+                <pre>
+                    <code class="language-html">
+&lt;label&gt;
+    Cowbell
+    &lt;output id="brightness"&gt;25&lt;/output&gt;
+    &lt;input type="range" value="25" oninput="brightness.value=value" /&gt;
+&lt;/label&gt;
+                    </code>
+                </pre>
+                <button class="text" data-tooltip="Copy" data-placement="left">
+                    <div class="data-icon">content_copy</div>
+                </button>
+            </footer>
+        </section>
+
+
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
