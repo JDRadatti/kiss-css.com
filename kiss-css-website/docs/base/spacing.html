@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>KISS CSS - Spacing</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="wide"> <kiss-navbar></kiss-navbar> </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Page Header -->
+        <hgroup>
+            <h1>Spacing</h1>
+            <div class="title3">Spacing is satisfying and adjusts according to the font size, ensuring that elements
+                look great at any scale. </div>
+        </hgroup>
+
+        <!-- Syntax -->
+        <section>
+            <h2 id="overview">Overview</h2>
+            <p>Padding and margins are defined with the spacing variables:</p>
+            <ul>
+                <li><code class="language-html">--xxs</code></li>
+                <li><code class="language-html">--xs</code></li>
+                <li><code class="language-html">--sm</code></li>
+                <li><code class="language-html">--md</code></li>
+                <li><code class="language-html">--lg</code></li>
+                <li><code class="language-html">--xl</code></li>
+                <li><code class="language-html">--xxl</code></li>
+            </ul>
+
+            <p>These variables ensure satisfying spacing and are easily customizable
+                for a unique look and feel.</p>
+        </section>
+        <section>
+            <h2 id="dynamic-spacing">Dynamic Spacing</h2>
+            <p>Spacing dynamically adapts to the current font size. For example, <code
+                    class="language-html">var(--lg)</code> is larger for <code class="language-html">.display2</code>
+                than
+                <code class="language-html">.title3</code>.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Font Size</th>
+                        <th scope="col">Default Element</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Display 1 -->
+                    <tr>
+                        <td>
+                            <div class="display1 flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="state-layer bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="state-layer bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="state-layer bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="state-layer bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="state-layer bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="state-layer bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="state-layer bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.display1</td>
+                        <td><code class="language-html">&lt;h1&gt;</code></td>
+                    </tr>
+
+                    <!-- Display 2 -->
+                    <tr>
+                        <td>
+                            <div class="display2 flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.display2</td>
+                        <td><code class="language-html">&lt;h2&gt;</code></td>
+                    </tr>
+
+                    <!-- Title 1 -->
+                    <tr>
+                        <td>
+                            <div class="title1 flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.title1</td>
+                        <td><code class="language-html">&lt;h3&gt;</code></td>
+                    </tr>
+
+                    <!-- Title 2 -->
+                    <tr>
+                        <td>
+                            <div class="title2 flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.title2</td>
+                        <td><code class="language-html">&lt;h4&gt;</code></td>
+                    </tr>
+                    <!-- Title 3 -->
+                    <tr>
+                        <td>
+                            <div class="title3 flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.title3</td>
+                        <td><code class="language-html">&lt;h5&gt;</code></td>
+                    </tr>
+
+                    <!-- Heading -->
+                    <tr>
+                        <td>
+                            <div class="heading flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.heading</td>
+                        <td><code class="language-html">&lt;h6&gt;</code></td>
+                    </tr>
+
+                    <!-- Subheading -->
+                    <tr>
+                        <td>
+                            <div class="subheading flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.subheading</td>
+                        <td>N/A</td>
+                    </tr>
+
+                    <!-- Body -->
+                    <tr>
+                        <td>
+                            <div class="body flex-col__xxs">
+                                <div data-placement="right" data-tooltip="var(--xxs)" class="bg-tertiary"
+                                    style="width: var(--xxs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xs)" class="bg-tertiary"
+                                    style="width: var(--xs); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--sm)" class="bg-tertiary"
+                                    style="width: var(--sm); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--md)" class="bg-tertiary"
+                                    style="width: var(--md); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--lg)" class="bg-tertiary"
+                                    style="width: var(--lg); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xl)" class="bg-tertiary"
+                                    style="width: var(--xl); height: 16px;"></div>
+                                <div data-placement="right" data-tooltip="var(--xxl)" class="bg-tertiary"
+                                    style="width: var(--xxl); height: 16px;"></div>
+                            </div>
+                        </td>
+                        <td>.body</td>
+                        <td><code class="language-html">&lt;p&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 id="Customization">Customization</h2>
+            <p>Spacing can be linearly scaled with Sass using the <code class="language-html">$scaleFactor</code>
+                variable. </p>
+            <p>The spacing ratio can be changed with Sass using the <code class="language-html">$scaleRatio</code>
+                variable. This variable defaults to the golden ratio, 1.618.</p>
+        </section>
+    </main>
+
+    <!-- Menu -->
+    <aside>
+        <kiss-docs-menu></kiss-docs-menu>
+    </aside>
+
+    <!-- Toc -->
+    <aside>
+        <kiss-toc></kiss-toc>
+    </aside>
+
+    <!-- Footer -->
+    <footer><kiss-footer></kiss-footer></footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="../../js/navbar.js"></script>
+    <script type="module" src="../../js/footer.js"></script>
+    <script type="module" src="../../js/docs-menu.js"></script>
+    <script type="module" src="../../js/toc.js"></script>
+    <script type="module" src="../../js/copy.js"></script>
+    <script type="module" src="../../js/prism.js"></script>
+</body>
+
+</html>
