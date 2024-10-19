@@ -5,6 +5,15 @@ if (header == null) {
 
 const menuData = [
     {
+        summary: 'Getting Started',
+        links: [
+            "/docs/getting-started/about",
+            "/docs/getting-started/setup",
+            "/docs/getting-started/customize",
+            "/docs/getting-started/template",
+        ],
+    },
+    {
         summary: 'Building Blocks',
         links: [
             "/docs/base/button",
@@ -55,7 +64,7 @@ for (const element of menuData) {
 
         if (header.innerHTML == label) {
             listElements += "<li><a href=" + link + " aria-current='page'>" + label + "</a></li>";
-            current=" open"
+            current = " open"
         } else {
             listElements += "<li><a href=" + link + ">" + label + "</a></li>";
         }
