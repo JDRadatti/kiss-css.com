@@ -22,6 +22,7 @@ class Navbar extends HTMLElement {
                             href="https://github.com/JDRadatti/kiss-css">Github</a>
                     </div>
                 </li>
+                <li><theme-switcher></theme-switcher></li>
             </ul>
         </nav>
         `;
