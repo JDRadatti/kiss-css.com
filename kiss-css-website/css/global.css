@@ -634,3 +634,43 @@ body>footer {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.flex-row__flex-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--sm);
+}
+
+.github-mark {
+    filter: invert(0);
+    height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .github-mark {
+        filter: invert(1);
+    }
+}
+
+[data-theme="light"] {
+    .github-mark {
+        filter: invert(0);
+    }
+}
+
+[data-theme="dark"] {
+    .github-mark {
+        filter: invert(1);
+    }
+}
+
+
+body>header,
+body>aside:not(aside + aside) {
+    background-color: var(--md-sys-color-surface-container-low);
+}
