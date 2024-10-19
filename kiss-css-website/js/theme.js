@@ -30,7 +30,7 @@ class ThemeSwitcher extends HTMLElement {
                     aria-label="${newCta}"
                     data-tooltip="${newCta}"
                     data-placement="left"
-                    class="bg-onsecondary">
+                    class="bg-onsecondary text">
                     <div class="data-icon">light_mode</div>
                 </button>
         `;
