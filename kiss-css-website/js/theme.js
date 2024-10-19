@@ -14,7 +14,7 @@ const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 let currentThemeSetting = calculateSettingAsThemeString(localStorageTheme, systemSettingDark);
-var newCta = "Change to dark theme";
+var newCta = "Change to light theme";
 
 /// Button theme HTML 
 class ThemeSwitcher extends HTMLElement {
@@ -31,7 +31,7 @@ class ThemeSwitcher extends HTMLElement {
                     data-tooltip="${newCta}"
                     data-placement="left"
                     class="bg-onsecondary">
-                    <div class="data-icon">dark_mode</div>
+                    <div class="data-icon">light_mode</div>
                 </button>
         `;
     }
@@ -54,7 +54,7 @@ if (button !== null) {
         // and using sun/moon icons, for example
         button.setAttribute("aria-label", newCta);
         button.setAttribute("data-tooltip", newCta);
-        button.children[0].innerHTML = newTheme + "_mode";
+        button.children[0].innerHTML = currentThemeSetting + "_mode";
 
         // update theme attribute on HTML to switch theme in CSS
         document.documentElement.setAttribute("data-theme", newTheme);
