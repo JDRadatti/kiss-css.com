@@ -834,8 +834,8 @@ caption {
 
 :not(aside) > nav > ul > hr {
   width: 1px;
-  height: 50%;
-  opacity: 0.5;
+  height: 60%;
+  opacity: 0.7;
   border-right: 1px solid var(--md-sys-color-outline-variant);
   border-bottom: none;
   border-top: none;
@@ -1904,10 +1904,10 @@ a[data-icon]:hover {
 }
 
 :not(button, summary)[data-icon]:not([data-placement=right])::before, :not(button, summary)[data-icon][data-placement=left]::before {
-  padding-right: calc(1.272em * 0);
+  padding-right: var(--xs);
 }
 :not(button, summary)[data-icon][data-placement=right]::before {
-  padding-left: calc(1.272em * 0);
+  padding-left: var(--xs);
 }
 :not(button, summary)[data-icon][data-placement=top]::before, :not(button, summary)[data-icon][data-placement=bottom]::before {
   padding: 0;
@@ -2139,6 +2139,10 @@ article.text {
   background-color: transparent;
 }
 
+article.fit {
+  width: fit-content;
+}
+
 button {
   letter-spacing: -0.004em;
   font-size: 0.8348972989em;
@@ -2257,6 +2261,7 @@ nav > ul > li {
 nav[role=menu],
 aside nav {
   flex-direction: column;
+  justify-content: flex-start;
 }
 nav[role=menu] ul,
 aside nav ul {
@@ -2264,9 +2269,25 @@ aside nav ul {
   flex-direction: column;
   gap: var(--xs);
 }
-
-aside nav {
-  justify-content: flex-start;
+nav[role=menu] > details:last-child,
+aside nav > details:last-child {
+  padding-bottom: var(--xxl);
+}
+nav[role=menu] details > summary,
+aside nav details > summary {
+  font-weight: 700;
+}
+nav[role=menu] details > summary.hide-arrows:after,
+aside nav details > summary.hide-arrows:after {
+  content: "";
+}
+nav[role=menu] details > summary[disabled],
+aside nav details > summary[disabled] {
+  pointer-events: none;
+}
+nav[role=menu] details > summary[disabled]:after,
+aside nav details > summary[disabled]:after {
+  content: "";
 }
 
 textarea,
@@ -2738,49 +2759,37 @@ select:focus {
   outline: 1px solid var(--md-sys-color-primary-container);
 }
 
-nav details {
+nav details:not([role=dropdown]) {
+  margin-top: var(--sm);
   margin-left: var(--sm);
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
-nav details ol,
-nav details ul {
+nav details:not([role=dropdown]) ol,
+nav details:not([role=dropdown]) ul {
   margin-top: 0;
-  margin-left: var(--sm);
+  margin-left: 0;
   list-style: none;
   border-left: 1px solid var(--md-sys-color-outline-variant);
   border-bottom: none;
   border-top: none;
   border-right: none;
 }
-nav details ol li:not(:has(> details)),
-nav details ul li:not(:has(> details)) {
+nav details:not([role=dropdown]) ol li:not(:has(> details)),
+nav details:not([role=dropdown]) ul li:not(:has(> details)) {
   padding: var(--xs) var(--sm);
 }
-nav details ol li:not(:has(> details)) a,
-nav details ul li:not(:has(> details)) a {
+nav details:not([role=dropdown]) ol li:not(:has(> details)) a,
+nav details:not([role=dropdown]) ul li:not(:has(> details)) a {
   color: var(--md-sys-color-secondary);
 }
-nav details ol li:not(:has(> details)) a:hover,
-nav details ul li:not(:has(> details)) a:hover {
+nav details:not([role=dropdown]) ol li:not(:has(> details)) a:hover,
+nav details:not([role=dropdown]) ul li:not(:has(> details)) a:hover {
   color: var(--md-sys-color-primary);
 }
-nav details ol li:not(:has(> details)) a[aria-current],
-nav details ul li:not(:has(> details)) a[aria-current] {
+nav details:not([role=dropdown]) ol li:not(:has(> details)) a[aria-current],
+nav details:not([role=dropdown]) ul li:not(:has(> details)) a[aria-current] {
   color: var(--md-sys-color-primary);
   font-weight: 650;
-}
-
-aside nav details > summary {
-  font-weight: 700;
-}
-aside nav details > summary.hide-arrows:after {
-  content: "";
-}
-aside nav details > summary[disabled] {
-  pointer-events: none;
-}
-aside nav details > summary[disabled]:after {
-  content: "";
 }
 
 [data-tooltip] {
@@ -2888,8 +2897,16 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 210px 1fr 210px;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
   min-height: 100vh;
+}
+body:has(aside) {
+  grid-template-areas: "header header header" "menu main main" "menu footer footer";
+}
+body:has(aside + aside) {
+  grid-template-areas: "header header header" "menu main sidebar" "menu footer footer";
+}
+body:not(:has(aside)) {
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
 body > header {
   grid-area: header;
@@ -2901,31 +2918,41 @@ body > main {
 body > footer {
   grid-area: footer;
 }
-body:has(aside) {
-  grid-template-areas: "header header header" "menu main main" "footer footer footer";
-}
-body:has(aside + aside) {
-  grid-template-areas: "header header header" "menu main sidebar" "footer footer footer";
-}
-body:not(:has(aside)) {
-  grid-template-areas: "header header header" "menu menu menu" "footer footer footer";
-}
 body > aside {
   grid-area: menu;
   width: 210px;
-  padding-top: var(--sm);
 }
 body > aside + aside {
   grid-area: sidebar;
 }
+body > aside + aside details {
+  margin-left: 0;
+}
 
 body > aside nav {
   position: sticky;
-  top: 25px;
-  overflow: scroll;
-  height: 85vh;
+  top: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
 }
 
+@media screen and (max-width: 992px) {
+  body:has(aside + aside) {
+    grid-template-areas: "header header header" "menu main main" "footer footer footer";
+  }
+  body:has(aside + aside) > aside + aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body:has(aside + aside), body:has(aside) {
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+  body:has(aside + aside) > aside, body:has(aside) > aside {
+    display: none;
+  }
+}
 body > footer,
 body > header:not(.wide),
 body > main {
@@ -2975,10 +3002,6 @@ body > main {
   padding-top: var(--lg);
   padding-bottom: var(--lg);
   overflow: hidden;
-}
-
-body > main > hgroup {
-  padding-top: var(--lg);
 }
 
 section > *:not(:last-child, h1, h2, h3, h4, h5, h6) {
