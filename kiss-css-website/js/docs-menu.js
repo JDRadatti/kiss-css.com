@@ -7,10 +7,10 @@ const menuData = [
     {
         summary: 'Getting Started',
         links: [
-            "/docs/getting-started/about",
             "/docs/getting-started/setup",
             "/docs/getting-started/customize",
             "/docs/getting-started/template",
+            "/docs/getting-started/about",
         ],
     },
     {

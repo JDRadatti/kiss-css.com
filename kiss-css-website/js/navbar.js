@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
                 </a>
             </ul>
             <ul>
-                <li><a class="contrast" href="/docs/getting-started/about">Docs</a></li>
+                <li><a class="contrast" href="/docs/getting-started/setup">Docs</a></li>
                 <hr/>
                 <li>
                     <div class="flex-row__flex-start">
