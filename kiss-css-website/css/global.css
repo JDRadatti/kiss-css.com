@@ -7,7 +7,7 @@
 }
 
 [role="copy"] {
-    background-color: #2d2d2d;
+    background-color: var(--md-sys-color-surface-container-low);
     padding: var(--kiss-card-border-radius);
 }
 
