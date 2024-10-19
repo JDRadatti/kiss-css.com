@@ -6,6 +6,12 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
+
+                about: resolve(__dirname, 'docs/getting-started/about.html'),
+                setup: resolve(__dirname, 'docs/getting-started/setup.html'),
+                template: resolve(__dirname, 'docs/getting-started/template.html'),
+                customization: resolve(__dirname, 'docs/getting-started/customization.html'),
+
                 dropdown: resolve(__dirname, 'docs/components/dropdown.html'),
                 accordian: resolve(__dirname, 'docs/components/accordian.html'),
                 card: resolve(__dirname, 'docs/components/card.html'),
