@@ -8,7 +8,7 @@ class Navbar extends HTMLElement {
         this.innerHTML = `
         <nav>
             <ul>
-                <li><a href="/" class="contrast title2__bold" style="text-decoration: none;" data-tooltip="Home">
+                <li><a href="/" class="contrast title2__bold" style="text-decoration: none;" data-tooltip="Home" data-placement="right">
                     KISS CSS
                 </a>
             </ul>
