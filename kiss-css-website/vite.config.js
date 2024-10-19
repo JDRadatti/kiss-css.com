@@ -10,7 +10,7 @@ export default defineConfig({
                 about: resolve(__dirname, 'docs/getting-started/about.html'),
                 setup: resolve(__dirname, 'docs/getting-started/setup.html'),
                 template: resolve(__dirname, 'docs/getting-started/template.html'),
-                customization: resolve(__dirname, 'docs/getting-started/customization.html'),
+                customization: resolve(__dirname, 'docs/getting-started/customize.html'),
 
                 dropdown: resolve(__dirname, 'docs/components/dropdown.html'),
                 accordian: resolve(__dirname, 'docs/components/accordian.html'),
