@@ -876,7 +876,7 @@ caption {
 .primary:hover {
   color: var(--md-sys-color-secondary);
 }
-.primary[aria-current] {
+.primary:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-secondary);
   font-weight: 650;
 }
@@ -887,7 +887,7 @@ caption {
 .secondary:hover {
   color: var(--md-sys-color-primary);
 }
-.secondary[aria-current] {
+.secondary:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-primary);
   font-weight: 650;
 }
@@ -898,7 +898,7 @@ caption {
 .tertiary:hover {
   color: var(--md-sys-color-secondary);
 }
-.tertiary[aria-current] {
+.tertiary:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-secondary);
   font-weight: 650;
 }
@@ -909,7 +909,7 @@ caption {
 .contrast:hover {
   color: var(--md-sys-color-secondary);
 }
-.contrast[aria-current] {
+.contrast:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-secondary);
   font-weight: 650;
 }
@@ -923,7 +923,7 @@ a {
 a:hover {
   color: var(--md-sys-color-secondary);
 }
-a[aria-current] {
+a:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-secondary);
   font-weight: 650;
 }
@@ -2786,8 +2786,8 @@ nav details:not([role=dropdown]) ol li:not(:has(> details)) a:hover,
 nav details:not([role=dropdown]) ul li:not(:has(> details)) a:hover {
   color: var(--md-sys-color-primary);
 }
-nav details:not([role=dropdown]) ol li:not(:has(> details)) a[aria-current],
-nav details:not([role=dropdown]) ul li:not(:has(> details)) a[aria-current] {
+nav details:not([role=dropdown]) ol li:not(:has(> details)) a:not([aria-current=false])[aria-current],
+nav details:not([role=dropdown]) ul li:not(:has(> details)) a:not([aria-current=false])[aria-current] {
   color: var(--md-sys-color-primary);
   font-weight: 650;
 }
