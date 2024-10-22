@@ -23,7 +23,7 @@ class TOC extends HTMLElement {
     }
 }
 
-customElements.define('kiss-toc', TOC);
+customElements.define('rad-toc', TOC);
 
 
 ///// Create dynamic TOC //// 

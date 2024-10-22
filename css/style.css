@@ -397,11 +397,11 @@ table {
 * */
 :root {
   /* Colors */
-  --kiss-background-color: var(--md-sys-color-background);
-  --kiss-font-color: var(--md-sys-color-on-background);
-  --kiss-global-border-radius: 10em;
-  --kiss-card-border-radius: 1em;
-  --kiss-border-radius: var(--xxs, 0.2em);
+  --rad-background-color: var(--md-sys-color-background);
+  --rad-font-color: var(--md-sys-color-on-background);
+  --rad-global-border-radius: 10em;
+  --rad-card-border-radius: 1em;
+  --rad-border-radius: var(--xxs, 0.2em);
 }
 
 :root {
@@ -424,10 +424,10 @@ table {
   --quarterstep-dec: $quarterstep-dec;
   --eighthstep-dec: $eighthstep-dec;
   --lineHeightInEms: calc(1em * $wholestep);
-  background-color: var(--kiss-background-color);
-  color: var(--kiss-font-color);
-  --state-color: var(--kiss-font-color);
-  --bg-color: var(--kiss-background-color);
+  background-color: var(--rad-background-color);
+  color: var(--rad-font-color);
+  --state-color: var(--rad-font-color);
+  --bg-color: var(--rad-background-color);
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
@@ -904,7 +904,7 @@ caption {
 }
 
 .contrast {
-  color: var(--kiss-font-color);
+  color: var(--rad-font-color);
 }
 .contrast:hover {
   color: var(--md-sys-color-secondary);
@@ -2223,7 +2223,7 @@ button[data-icon][data-placement=right] {
 }
 
 header:has(nav) {
-  background-color: var(--kiss-background-color);
+  background-color: var(--rad-background-color);
   border-bottom: 1px solid var(--md-sys-color-outline-variant);
   border-top: none;
   border-left: none;

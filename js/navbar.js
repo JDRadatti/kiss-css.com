@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
         <nav>
             <ul>
                 <li><a href="/" class="contrast title2__bold" style="text-decoration: none;" data-tooltip="Home" data-placement="right">
-                    KISS CSS
+                    RAD CSS
                 </a>
             </ul>
             <ul>
@@ -19,7 +19,7 @@ class Navbar extends HTMLElement {
                     <div class="flex-row__flex-start">
                         <img class="github-mark" src="/github-mark.svg" alt="github-mark" />
                         <a class="contrast" data-icon="open_in_new" data-placement="right"
-                            href="https://github.com/JDRadatti/kiss-css">Github</a>
+                            href="https://github.com/JDRadatti/rad-css">Github</a>
                     </div>
                 </li>
                 <li><theme-switcher></theme-switcher></li>
@@ -29,4 +29,4 @@ class Navbar extends HTMLElement {
     }
 }
 
-customElements.define('kiss-navbar', Navbar);
+customElements.define('rad-navbar', Navbar);

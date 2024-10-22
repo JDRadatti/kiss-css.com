@@ -14,4 +14,4 @@ class Footer extends HTMLElement {
     }
 }
 
-customElements.define('kiss-footer', Footer);
+customElements.define('rad-footer', Footer);

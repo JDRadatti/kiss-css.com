@@ -90,4 +90,4 @@ class DocsMenu extends HTMLElement {
     }
 }
 
-customElements.define('kiss-docs-menu', DocsMenu);
+customElements.define('rad-docs-menu', DocsMenu);
